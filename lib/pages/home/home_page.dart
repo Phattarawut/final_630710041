@@ -85,9 +85,18 @@ class _HomePageState extends State<HomePage> {
                   Text(_polls![index].question),
                 ],
               ),
+              for(var i = 0; i < _polls![index].choices.length; i++)
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(_polls![index].choices[i].toString()),
+                ),
+              ),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {},
-                child: Text(_polls![index].choices.toString()),
+                child: const Text('ดูผลโหวต'),
               )
             ],
           ),
